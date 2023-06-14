@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+.user-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  margin-right: 10px;
+}
+
+input,
+select,
+button {
+  margin: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+.user-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.user-card {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 200px;
+}
+
+nav a {
+  padding: 10px;
+  text-decoration: none;
+}
+
+nav a.active {
+  background-color: #ddd;
+}

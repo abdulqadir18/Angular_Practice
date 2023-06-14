@@ -1,0 +1,58 @@
+<div class="user-form">
+  <h1>User Form</h1>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" formControlName="fullName">
+      <div *ngIf="submitted && userForm.get('fullName')?.invalid" class="error-message">
+        Full Name is required
+      </div>
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" formControlName="age">
+      <div *ngIf="submitted && userForm.get('age')?.invalid" class="error-message">
+        Age is required and must be greater than 0
+      </div>
+    </div>
+    <div>
+      <label for="gender">Gender:</label>
+      <select id="gender" formControlName="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+      <div *ngIf="submitted && userForm.get('gender')?.invalid" class="error-message">
+        Gender is required
+      </div>
+    </div>
+    <div>
+      <label for="state">State:</label>
+      <select id="state" formControlName="state">
+        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+      </select>
+      <div *ngIf="submitted && userForm.get('state')?.invalid" class="error-message">
+        State is required
+      </div>
+    </div>
+    <div>
+      <label for="city">City:</label>
+      <select id="city" formControlName="city">
+        <option *ngFor="let city of cities[userForm.get('state')?.value]" [value]="city">{{ city }}</option>
+      </select>
+      <div *ngIf="submitted && userForm.get('city')?.invalid" class="error-message">
+        City is required
+      </div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
+<div class="user-cards">
+  <div *ngFor="let user of users" class="user-card">
+    <h3>{{ user.fullName }}</h3>
+    <p>Age: {{ user.age }}</p>
+    <p>Gender: {{ user.gender }}</p>
+    <p>State: {{ user.state }}</p>
+    <p>City: {{ user.city }}</p>
+  </div>
+</div>

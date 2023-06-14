@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+nav {
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+nav a.active {
+  font-weight: bold;
+}
+
+.timer {
+  text-align: center;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+}
+
+

@@ -1,0 +1,9 @@
+<div class="timer">
+  <h1>Timer App</h1>
+  <p>Elapsed Time: {{ time }} seconds</p>
+  <div class="buttons">
+    <button (click)="startTimer()" [disabled]="isRunning">Start</button>
+    <button (click)="stopTimer()" [disabled]="!isRunning">Stop</button>
+    <button (click)="resetTimer()">Reset</button>
+  </div>
+</div>
