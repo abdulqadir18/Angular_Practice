@@ -1,0 +1,5 @@
+1. make routes for diff task
+2. task1 -> use github api to fetch repos of user in from of card should contain link user profile.
+3. task2 -> using pipes need to parse date-time string in different formats without using typescript
+4. task3 -> render json in format of not in objects (in the form that it appears after json stringify) using pipes without using typescript
+5. task4 -> module containing different components, on taking an input it should render a component based on it

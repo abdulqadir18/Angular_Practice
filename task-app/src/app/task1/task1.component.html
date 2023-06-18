@@ -1,0 +1,26 @@
+<!-- <div *ngFor="let repo of repositories">
+  <div class="repo-card">
+    <a [href]="repo.owner.html_url" target="_blank">{{ repo.owner.login }}</a>
+    <p><strong>Repo Name:</strong> {{ repo.name }}</p>
+    <p><strong>Description:</strong> {{ repo.description }}</p>
+  </div>
+</div> -->
+<div class="container">
+  <div class="repo-list">
+    <h2>Repositories</h2>
+    <div>
+      <input type="text" [(ngModel)]="username" placeholder="Enter a GitHub username" />
+      <button (click)="getRepositories()">Get Repositories</button>
+    </div>
+    <div *ngIf="repos.length === 0" class="no-repos">
+      No repositories found for the entered username.
+    </div>
+    <div *ngFor="let repo of repos" class="repo-card">
+      <h3>{{ repo.name }}</h3>
+      <p>{{ repo.description }}</p>
+      <a [href]="repo.html_url" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+</div>
+
+

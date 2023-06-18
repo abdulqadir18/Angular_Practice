@@ -1,0 +1,11 @@
+.main-nav-bar{
+  padding: 20px;
+  text-align: center;
+}
+
+.main-nav-tab{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
