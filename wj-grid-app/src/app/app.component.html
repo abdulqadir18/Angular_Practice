@@ -1,0 +1,25 @@
+<!-- <wj-flex-grid [itemsSource]="gridData">
+  <wj-flex-grid-column binding="id" header="ID"></wj-flex-grid-column>
+  <wj-flex-grid-column binding="name" header="Name"></wj-flex-grid-column>
+  <wj-flex-grid-column binding="age" header="Age"></wj-flex-grid-column>
+
+
+  <ng-template wjFlexGridDetailRow let-item>
+    <div class="detail-row">
+      <p><strong>Additional Information:</strong></p>
+      <p><strong>ID:</strong> {{ item.id }}</p>
+      <p><strong>Name:</strong> {{ item.name }}</p>
+      <p><strong>Age:</strong> {{ item.age }}</p>
+    </div>
+  </ng-template>
+</wj-flex-grid> -->
+
+<!-- Working -->
+<!-- <wj-flex-grid [itemsSource]="gridData">
+  <wj-flex-grid-column [binding]="'id'" [header]="'ID'"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'age'" [header]="'Age'"></wj-flex-grid-column>
+  <wj-flex-grid-column [binding]="'name'" [header]="'Name'"></wj-flex-grid-column>
+</wj-flex-grid> -->
+
+<app-wijmo-grid [gridData]="gridData" (rowSelected)="onRowSelected($event)"></app-wijmo-grid>
+

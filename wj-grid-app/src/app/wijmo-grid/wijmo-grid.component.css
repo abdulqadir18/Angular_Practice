@@ -1,0 +1,20 @@
+/* Grid container */
+:host {
+  display: block;
+  margin-top: 20px;
+}
+
+/* Grid headers */
+.wj-header {
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ccc;
+  font-weight: bold;
+}
+
+/* Grid cells */
+.wj-cell {
+  padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
